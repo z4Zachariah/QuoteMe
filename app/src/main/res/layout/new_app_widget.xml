@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Dark2"
+    android:padding="@dimen/widget_margin"
+    android:theme="@style/ThemeOverlay.QuoteMe.AppWidgetContainer"
+    >
+
+    <TextView
+        android:id="@+id/quote_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"
+        android:contentDescription="Quote"
+        android:gravity="center"
+        android:text="Quote"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="italic" />
+
+
+    <TextView
+        android:id="@+id/source_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:contentDescription="Source"
+        android:text="Source"
+        android:textColor="@color/grey"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_below="@+id/quote_text"/>
+
+
+
+
+
+</RelativeLayout>
