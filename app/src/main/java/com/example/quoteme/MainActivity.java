@@ -142,10 +142,11 @@ public class MainActivity extends AppCompatActivity {
 
         // if there aren't any quotes, set quote to no quote message
         int count = myDatabase.dao().getCount();
-        if (count<1){
+        if (count==0){
             textOutput.setText(R.string.no_quotes);
             sourcetext.setText(" ");
         }
+
 
         //if at least one quote, get a random one
         else {
@@ -161,12 +162,18 @@ public class MainActivity extends AppCompatActivity {
             //get the length of the array
             int length = ids.length;
             // use random number generator to get a random index for the array
-            int random = RandomNumber(0, length - 1);
+            int random = RandomNumber(length+1);
 
+            Quotes rand;
 
-            // get the quote via random id
-            Quotes rand = myDatabase.dao().randomQuote(ids[random]);
-
+            //if there's only one quote, get that, else run the rng
+            if (length ==1){
+                rand = myDatabase.dao().randomQuote(ids[0]);
+            }
+            else {
+                // get the quote via random id
+                rand = myDatabase.dao().randomQuote(ids[random]);
+            }
 
             //set the text to the quote and source, using the animation transition
             textOutput.setText(rand.getQuote());
@@ -174,13 +181,15 @@ public class MainActivity extends AppCompatActivity {
             textOutput.startAnimation(animation);
             sourcetext.startAnimation(animation);
         }
+
+
     }// end of random quote
 
 
     // random number generator
-    public int RandomNumber(int min, int max) {
+    public static int RandomNumber(int max) {
         Random random = new Random();
-        return random.nextInt(max - min) + min;
+        return random.nextInt(max);
     }
 
 

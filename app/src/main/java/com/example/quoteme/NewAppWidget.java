@@ -38,7 +38,7 @@ public class NewAppWidget extends AppWidgetProvider {
         //get the length of the db
         int length = ids.length;
         //get random number for index
-        int random = RandomNumber(0,length-1);
+        int random = RandomNumber(length+1);
 
 
 
@@ -53,8 +53,17 @@ public class NewAppWidget extends AppWidgetProvider {
 
         }
         else {
-            Quotes rand = myDatabase.dao().randomQuote(ids[random]);
 
+            Quotes rand;
+
+            //if there's only one quote, get that, else run the rng
+            if (length ==1){
+                rand = myDatabase.dao().randomQuote(ids[0]);
+            }
+            else {
+                // get the quote via random id
+                rand = myDatabase.dao().randomQuote(ids[random]);
+            }
             //set to a random quote
             views.setTextViewText(R.id.quote_text, rand.getQuote());
             views.setTextViewText(R.id.source_text, rand.getSource());
@@ -105,10 +114,10 @@ public class NewAppWidget extends AppWidgetProvider {
         return Text;
     }
 
-    // generate randomnumber
-    public static int RandomNumber(int min, int max) {
+    // random number generator
+    public static int RandomNumber(int max) {
         Random random = new Random();
-        return random.nextInt(max - min) + min;
+        return random.nextInt(max);
     }
 
 
