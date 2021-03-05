@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textColor="@color/grey"
-        android:text="Long Press to Delete"
+        android:text="@string/delete_msg"
         />
 
     <androidx.recyclerview.widget.RecyclerView

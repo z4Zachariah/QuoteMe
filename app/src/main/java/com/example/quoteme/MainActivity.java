@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     public MyDatabase myDatabase;
 
 
-    // oncreate is the first thing run at the start of an activity's lifecycle.
+    // on create is the first thing run at the start of an activity's lifecycle.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -136,14 +136,14 @@ public class MainActivity extends AppCompatActivity {
 // method to get a random quote from the database and animate the transition
     public  void randomQuote(){
 
-        // find the textviews in the activity
+        // find the text views in the activity
         final TextView textOutput = findViewById(R.id.textoutput);
         final TextView sourcetext = findViewById(R.id.source);
 
-        // if there arent any quotes, set quote to no quote message
+        // if there aren't any quotes, set quote to no quote message
         int count = myDatabase.dao().getCount();
         if (count<1){
-            textOutput.setText("No Quotes to Show");
+            textOutput.setText(R.string.no_quotes);
             sourcetext.setText(" ");
         }
 

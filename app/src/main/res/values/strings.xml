@@ -2,4 +2,11 @@
     <string name="app_name">QuoteMe</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
+    <string name="no_quotes">No Quotes to Show</string>
+    <string name="quote">Quote</string>
+    <string name="source_optional">Source (optional)</string>
+    <string name="submit">Submit</string>
+    <string name="source">Source</string>
+    <string name="msg">Swipe to Change</string>
+    <string name="delete_msg">Long Press to Delete</string>
 </resources>

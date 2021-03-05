@@ -15,7 +15,7 @@
         android:layout_margin="20dp"
         android:contentDescription="Quote"
         android:gravity="center"
-        android:text="Quote"
+        android:text="@string/quote"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="italic" />
@@ -29,7 +29,7 @@
         android:layout_centerVertical="true"
         android:layout_margin="8dp"
         android:contentDescription="Source"
-        android:text="Source"
+        android:text="@string/source"
         android:textColor="@color/grey"
         android:textSize="18sp"
         android:textStyle="italic"

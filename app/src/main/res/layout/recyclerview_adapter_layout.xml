@@ -28,7 +28,7 @@
             cardView:layout_constraintEnd_toEndOf="parent"
             cardView:layout_constraintStart_toStartOf="parent"
             cardView:layout_constraintTop_toTopOf="parent"
-            android:text="Quote" />
+            android:text="@string/quote" />
 
         <TextView
             android:id="@+id/source"
@@ -40,7 +40,7 @@
             android:gravity="center"
             android:padding="5dp"
             android:textSize="15dp"
-            android:text="Source"
+            android:text="@string/source"
             android:textColor="@color/grey"
             cardView:layout_constraintBottom_toBottomOf="parent"
             cardView:layout_constraintEnd_toEndOf="parent"
