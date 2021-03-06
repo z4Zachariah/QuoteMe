@@ -1,4 +1,4 @@
-package com.example.quoteme;
+package com.Aegis.quoteme;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -6,7 +6,6 @@ import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
-import androidx.room.Room;
 
 import java.util.Random;
 

@@ -1,9 +1,8 @@
-package com.example.quoteme;
+package com.Aegis.quoteme;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.room.Room;
 
 import android.content.DialogInterface;
 import android.os.Bundle;

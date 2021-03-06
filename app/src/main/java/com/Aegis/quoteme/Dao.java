@@ -1,6 +1,5 @@
-package com.example.quoteme;
+package com.Aegis.quoteme;
 
-import androidx.lifecycle.LiveData;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;

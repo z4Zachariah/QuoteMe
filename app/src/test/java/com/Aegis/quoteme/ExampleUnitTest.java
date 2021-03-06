@@ -1,4 +1,4 @@
-package com.example.quoteme;
+package com.Aegis.quoteme;
 
 import org.junit.Test;
 

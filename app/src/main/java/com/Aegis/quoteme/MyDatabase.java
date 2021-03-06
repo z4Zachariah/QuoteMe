@@ -1,4 +1,4 @@
-package com.example.quoteme;
+package com.Aegis.quoteme;
 
 import android.content.Context;
 
