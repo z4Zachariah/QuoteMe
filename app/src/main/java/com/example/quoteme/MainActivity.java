@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
             //get the length of the array
             int length = ids.length;
             // use random number generator to get a random index for the array
-            int random = RandomNumber(length+1);
+            int random = RandomNumber(length);
 
             Quotes rand;
 

@@ -33,12 +33,11 @@ public class NewAppWidget extends AppWidgetProvider {
         int[] ids = myDatabase.dao().getIDs();
 
         // get number of quotes
-        int count = myDatabase.dao().getCount();
+       // int count = myDatabase.dao().getCount();
 
         //get the length of the db
         int length = ids.length;
         //get random number for index
-        int random = RandomNumber(length+1);
 
 
 
@@ -46,7 +45,7 @@ public class NewAppWidget extends AppWidgetProvider {
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.new_app_widget);
 
         //if there are no quotes, display message, else get a random quote
-        if (count<1)
+        if (length == 0)
         {
             views.setTextViewText(R.id.quote_text, "No quotes to Show");
             views.setTextViewText(R.id.source_text, " ");
@@ -61,6 +60,9 @@ public class NewAppWidget extends AppWidgetProvider {
                 rand = myDatabase.dao().randomQuote(ids[0]);
             }
             else {
+
+                int random = RandomNumber(length);
+
                 // get the quote via random id
                 rand = myDatabase.dao().randomQuote(ids[random]);
             }
